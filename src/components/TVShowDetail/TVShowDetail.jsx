@@ -6,6 +6,7 @@ export function TVShowDetail({ tvShow }) {
     return (
         <div>
             <div className={s.title}>{tvShow.name}</div>
+            <div className={s.category}>{tvShow.first_air_date}</div>
             <div className={s.rating_container}>
                 <FiveStarRating rating={rating} />
                 <span className={s.rating}>{rating}/5</span>

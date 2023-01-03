@@ -20,6 +20,7 @@ export function App() {
             fetchRecommendations(currentTVShow.id);
         }
     }, [currentTVShow]);
+    console.log("***", currentTVShow);
 
     async function fetchPopulars() {
         const popularTVShowList = await TVShowAPI.fetchPopulars();
