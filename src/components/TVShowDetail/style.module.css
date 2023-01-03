@@ -16,10 +16,11 @@
     overflow-y: auto;
 }
 .overview {
+    text-align: justify;
     font-family: Roboto;
     font-weight: 400;
     font-size: 20px;
-    height: 120px;
+    height: 160px;
     overflow-y: hidden;
     margin-top: 10px;
 }
