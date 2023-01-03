@@ -1,5 +1,6 @@
-O'FIX
+O'FLIX !
 
-How to fix bugs ....
+How to debug .... !
 
+npm i
 npm start

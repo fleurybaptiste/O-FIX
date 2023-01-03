@@ -1,23 +1,25 @@
-import { SMALL_IMG_COVER_BASE_URL } from "../../api/config";
-import { FiveStarRating } from "../FiveStarRating/FiveStarRating";
 import s from "./style.module.css";
+import { FiveStarRating } from "../FiveStarRating/FiveStarRating";
+import { SMALL_IMG_COVER_BASE_URL } from "../../config";
+const MAX_TITLE_CHAR = 20;
 
-export function TVShowListItem({ tvShow }) {
+export function TVShowListItem({ tvShow, onClick }) {
     const rating = tvShow.vote_average / 2;
+    const onClick_ = () => {
+        onClick(tvShow);
+    };
     return (
-        <div className={s.container}>
+        <div onClick={onClick_} className={s.container}>
             <img
-                className={s.img}
-                src={SMALL_IMG_COVER_BASE_URL + tvShow.backdrop_path}
                 alt={tvShow.name}
+                src={SMALL_IMG_COVER_BASE_URL + tvShow.backdrop_path}
+                className={s.img}
             />
-            <div className={s.title_rating}>
-                <div className={s.title}>
-                    {tvShow.name}
-                    <div className={s.rating}>
-                        <FiveStarRating rating={rating} />
-                    </div>
-                </div>
+            <div className={s.title}>
+                {tvShow.name.length > MAX_TITLE_CHAR
+                    ? tvShow.name.slice(0, MAX_TITLE_CHAR) + "..."
+                    : tvShow.name}
+                <FiveStarRating className={s.rating} rating={rating} />
             </div>
         </div>
     );

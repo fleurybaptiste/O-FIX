@@ -3,20 +3,19 @@
     flex-direction: column;
     height: 100vh;
     padding: 25px;
-    background-color: #1a1a1a;
+    background-color: black;
 }
 
 .header {
-    flex: 1;
-    margin-bottom: 10px;
-}
-
-.tv_show_detail {
     flex: 2;
-    height: auto;
+}
+.title {
+    color: red;
+}
+.tv_show_details {
+    flex: 4;
 }
 
-.recommandation {
-    flex: 1;
-    height: auto;
+.recommended_shows {
+    flex: 2;
 }

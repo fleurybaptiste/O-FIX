@@ -1,25 +1,26 @@
-import s from "./style.module.css";
-import { StarFill, Star as StarEmpty, StarHalf } from "react-bootstrap-icons";
-
+import { StarFill, StarHalf, Star as StarEmpty } from "react-bootstrap-icons";
 export function FiveStarRating({ rating }) {
-    const stars = [];
-    const starFill = Math.floor(rating);
-    const hasStarHalf = rating - starFill >= 0.5;
-    const emptyStarCount = 5 - starFill - (hasStarHalf ? 1 : 0);
+  // Declare star icon array
+  const starList = [];
+  // Store number of filled stars
+  const starFillCount = Math.floor(rating);
+  // Store if yes or no there is a half star
+  const hasHalfStar = rating - parseInt(rating) >= 0.5;
+  // Store the number of empty stars
+  const emptyStarCount = 5 - starFillCount - (hasHalfStar ? 1 : 0);
 
-    for (let i = 0; i < 5; i++) {
-        if (rating >= 1) {
-            stars.push(
-                <StarFill className={s.star_fill} key={"star-fill" + i} />,
-            );
-        } else if (hasStarHalf) {
-            stars.push(<StarHalf className={s.star_half} key={"star-fill"} />);
-        } else {
-            stars.push(<StarEmpty key={"star-empty"} />);
-        }
-        rating--;
-    }
-    console.log(starFill, hasStarHalf, emptyStarCount);
-
-    return <div>{stars}</div>;
+  // Push the filled star icons
+  for (let i = 1; i <= starFillCount; i++) {
+    starList.push(<StarFill key={"star-fill" + i} />);
+  }
+  // Push an half star icon if necessary
+  if (hasHalfStar) {
+    starList.push(<StarHalf key={"star-half"} />);
+  }
+  // Push the empty star icons
+  for (let i = 1; i <= emptyStarCount; i++) {
+    starList.push(<StarEmpty key={"star-empty" + i} />);
+  }
+  // Render the star icon array
+  return <div>{starList}</div>;
 }
