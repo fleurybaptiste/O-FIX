@@ -60,7 +60,7 @@ export function App() {
                 <div className="row">
                     <div className="col-4">
                         <Logo
-                            title="O'FLIX"
+                            title="BAPTFLIX"
                             subtitle="Movies or Challenges ?"
                             image={logoImg}
                         />
