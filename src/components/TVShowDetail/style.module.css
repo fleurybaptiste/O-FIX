@@ -1,0 +1,38 @@
+.title {
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.language {
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.synopsis:hover {
+    overflow-y: auto;
+}
+
+.synopsis {
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 120px;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+
+.rating_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.rating {
+    margin-top: 4px;
+    margin-left: 5px;
+}

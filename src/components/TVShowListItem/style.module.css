@@ -1,0 +1,38 @@
+.container {
+    cursor: pointer;
+    width: 300px;
+}
+
+.img {
+    border-radius: 10px;
+}
+
+/* .title_rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+} */
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: -40px;
+    height: 40px;
+    width: 300px;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.rating {
+    margin-right: 15px;
+}
